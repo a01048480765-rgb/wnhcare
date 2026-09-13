@@ -177,7 +177,7 @@ export default function App() {
   return (
     <div
       id="digital-card-page"
-      className="min-h-[100dvh] w-full bg-[#030303] text-stone-100 flex flex-col items-center justify-start sm:justify-center p-2 sm:p-4 select-none font-sans overflow-x-hidden overflow-y-auto relative py-6"
+      className="min-h-[100dvh] w-full bg-[#030303] text-stone-100 flex flex-col items-center justify-center p-2 sm:p-4 select-none font-sans overflow-x-hidden overflow-y-auto relative py-6"
     >
       {/* Background Pearl Glitter & Twinkling Sparkles */}
       <PearlSparklesBackground />
