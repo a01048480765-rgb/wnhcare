@@ -70,7 +70,7 @@ export default function App() {
       },
       {
         id: 'blog',
-        title: '블로그',
+        title: '네이버 블로그',
         desc: '시공후기',
         badge: '공식 블로그',
         url: 'https://blog.naver.com/dlalstj2637',
@@ -87,22 +87,31 @@ export default function App() {
         type: 'youtube',
       },
       {
-        id: 'daangn',
-        title: '당근',
-        desc: '이웃들의 리얼 후기와 단골 소식',
-        badge: '단골 맺기',
-        url: 'https://www.daangn.com/kr/local-profile/%EC%9B%94%EC%95%A4%ED%99%88%EC%BC%80%EC%96%B4-6q3xgn3y6mkg/',
+        id: 'kakao',
+        title: '카카오톡',
+        desc: '1:1 실시간 카톡 상담',
+        badge: '실시간 상담',
+        url: 'https://pf.kakao.com/_QxodrX/chat',
         isReady: true,
-        type: 'daangn',
+        type: 'kakao',
       },
       {
         id: 'instagram',
-        title: '인스타',
+        title: '인스타그램',
         desc: '월앤홈케어 공식 인스타그램',
         badge: '공식 SNS',
         url: 'https://www.instagram.com/032.6l/',
         isReady: true,
         type: 'instagram',
+      },
+      {
+        id: 'daangn',
+        title: '당근마켓',
+        desc: '이웃들의 리얼 후기와 단골 소식',
+        badge: '단골 맺기',
+        url: 'https://www.daangn.com/kr/local-profile/%EC%9B%94%EC%95%A4%ED%99%88%EC%BC%80%EC%96%B4-6q3xgn3y6mkg/',
+        isReady: true,
+        type: 'daangn',
       },
     ],
   };
@@ -255,55 +264,39 @@ export default function App() {
             </div>
           </div>
 
-          {/* Standalone Contact Actions Frame (전화걸기 / 카톡상담 / 문자상담 / 이메일 독립 프레임) */}
+          {/* Standalone Contact Actions Frame (전화걸기 / 문자상담 / 이메일 독립 프레임) */}
           <div
             id="contact-actions-frame"
             className="w-full p-[1.2cqw] rounded-[1.8cqw] bg-stone-950/75 border border-amber-500/30 shadow-md shadow-black/50 backdrop-blur-sm"
           >
-            <div className="grid grid-cols-4 gap-[1cqw] w-full">
+            <div className="grid grid-cols-3 gap-[1.2cqw] w-full">
               <a
                 id="call-btn"
                 href={`tel:${cardData.phone}`}
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-amber-500/20 hover:bg-amber-500/30 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all shadow-md shadow-amber-500/10 border border-amber-400/50 text-[3.5cqw] whitespace-nowrap leading-none"
+                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-amber-500/20 hover:bg-amber-500/30 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all shadow-md shadow-amber-500/10 border border-amber-400/50 text-[3.8cqw] whitespace-nowrap leading-none"
                 title={`${cardData.phone} 전화걸기`}
               >
-                <Phone className="w-[4cqw] h-[4cqw] text-amber-400 shrink-0" />
+                <Phone className="w-[4.2cqw] h-[4.2cqw] text-amber-400 shrink-0" />
                 <span>전화걸기</span>
-              </a>
-
-              <a
-                id="kakao-btn"
-                href={cardData.kakaoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.5cqw] shadow-sm whitespace-nowrap leading-none group"
-                title="카카오톡 1:1 상담 바로가기"
-              >
-                <img
-                  src="/kakaotalk-icon.svg"
-                  alt="카톡"
-                  className="w-[4cqw] h-[4cqw] shrink-0 object-contain group-hover:scale-110 transition-transform"
-                />
-                <span>카톡상담</span>
               </a>
 
               <a
                 id="sms-btn"
                 href={`sms:${cardData.phone}`}
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.5cqw] shadow-sm whitespace-nowrap leading-none"
+                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.8cqw] shadow-sm whitespace-nowrap leading-none"
                 title={`${cardData.phone} 문자상담`}
               >
-                <MessageSquare className="w-[4cqw] h-[4cqw] text-amber-400 shrink-0" />
+                <MessageSquare className="w-[4.2cqw] h-[4.2cqw] text-amber-400 shrink-0" />
                 <span>문자상담</span>
               </a>
 
               <a
                 id="email-btn"
                 href={`mailto:${cardData.email}`}
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.5cqw] shadow-sm whitespace-nowrap leading-none"
+                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.8cqw] shadow-sm whitespace-nowrap leading-none"
                 title={`${cardData.email} 이메일 보내기`}
               >
-                <Mail className="w-[4cqw] h-[4cqw] text-amber-400 shrink-0" />
+                <Mail className="w-[4.2cqw] h-[4.2cqw] text-amber-400 shrink-0" />
                 <span>이메일</span>
               </a>
             </div>
@@ -328,85 +321,119 @@ export default function App() {
             </div>
           </div>
 
-          {/* 5 Core Channels (Site, Naver, Daangn, Instagram, YouTube) - All 5 buttons in perfect 1:1 square ratio */}
-          <div id="channel-links" className="grid grid-cols-5 gap-[1.2cqw] w-full">
-            {/* 1. 공식 사이트 (하우스 로고) */}
+          {/* 6 Core Channels (Site, Naver, YouTube, KakaoTalk, Instagram, Daangn) - 3 cols x 2 rows rectangular layout */}
+          <div id="channel-links" className="grid grid-cols-3 gap-[1.4cqw] w-full">
+            {/* 1. 공식 사이트 */}
             <a
               id="btn-website"
               href="https://service-880737087362.asia-south1.run.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="aspect-square w-full rounded-[2cqw] bg-stone-950/75 hover:bg-amber-950/35 border border-amber-500/30 hover:border-amber-400/70 flex items-center justify-center transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
+              className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-amber-950/35 border border-amber-500/30 hover:border-amber-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
               title="월앤홈케어 공식 홈페이지 바로가기"
             >
               <Home
-                className="w-[10cqw] h-[10cqw] text-amber-400 group-hover:text-amber-300 transition-transform group-hover:scale-110 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+                className="w-[5.4cqw] h-[5.4cqw] text-amber-400 group-hover:text-amber-300 transition-transform group-hover:scale-105 shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
                 strokeWidth={2.2}
               />
+              <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
+                홈페이지
+              </span>
             </a>
 
-            {/* 2. 네이버 블로그 (대표 공식 아이콘) */}
+            {/* 2. 네이버 블로그 */}
             <a
               id="btn-naver-blog"
               href="https://blog.naver.com/dlalstj2637"
               target="_blank"
               rel="noopener noreferrer"
-              className="aspect-square w-full rounded-[2cqw] bg-stone-950/75 hover:bg-emerald-950/35 border border-amber-500/30 hover:border-emerald-400/70 flex items-center justify-center transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
+              className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-emerald-950/35 border border-amber-500/30 hover:border-emerald-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
               title="네이버 블로그 바로가기"
             >
               <img
                 src="/naver-blog-icon.svg"
                 alt="네이버 블로그"
-                className="w-[10cqw] h-[10cqw] object-contain rounded-[1.8cqw] filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
+              <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
+                블로그
+              </span>
             </a>
 
-            {/* 3. 유튜브 (대표 공식 아이콘) */}
+            {/* 3. 유튜브 */}
             <a
               id="btn-youtube"
               href="https://www.youtube.com/@월앤홈케어"
               target="_blank"
               rel="noopener noreferrer"
-              className="aspect-square w-full rounded-[2cqw] bg-stone-950/75 hover:bg-red-950/35 border border-amber-500/30 hover:border-red-500/70 flex items-center justify-center transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
+              className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-red-950/35 border border-amber-500/30 hover:border-red-500/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
               title="유튜브 바로가기"
             >
               <img
                 src="/youtube-app-icon.svg"
                 alt="유튜브"
-                className="w-[10cqw] h-[10cqw] object-contain rounded-[1.8cqw] filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
+              <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
+                유튜브
+              </span>
             </a>
 
-            {/* 4. 당근 (대표 공식 아이콘) */}
+            {/* 4. 카카오톡 (당근과 자리 교체) */}
             <a
-              id="btn-daangn"
-              href="https://www.daangn.com/kr/local-profile/%EC%9B%94%EC%95%A4%ED%99%88%EC%BC%80%EC%96%B4-6q3xgn3y6mkg/"
+              id="btn-kakaotalk"
+              href={cardData.kakaoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="aspect-square w-full rounded-[2cqw] bg-stone-950/75 hover:bg-orange-950/35 border border-amber-500/30 hover:border-orange-400/70 flex items-center justify-center transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
-              title="당근 바로가기"
+              className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-yellow-950/35 border border-amber-500/30 hover:border-yellow-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
+              title="카카오톡 1:1 상담 바로가기"
             >
               <img
-                src="/daangn-app-icon.svg"
-                alt="당근"
-                className="w-[10cqw] h-[10cqw] object-contain rounded-[1.8cqw] filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                src="/kakaotalk-icon.svg"
+                alt="카카오톡"
+                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
+              <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
+                카카오톡
+              </span>
             </a>
 
-            {/* 5. 인스타그램 (대표 공식 아이콘) */}
+            {/* 5. 인스타그램 */}
             <a
               id="btn-instagram"
               href="https://www.instagram.com/032.6l/"
               target="_blank"
               rel="noopener noreferrer"
-              className="aspect-square w-full rounded-[2cqw] bg-stone-950/75 hover:bg-pink-950/35 border border-amber-500/30 hover:border-pink-400/70 flex items-center justify-center transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
+              className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-pink-950/35 border border-amber-500/30 hover:border-pink-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
               title="인스타그램 바로가기"
             >
               <img
                 src="/instagram.svg"
                 alt="인스타그램"
-                className="w-[10cqw] h-[10cqw] object-contain rounded-[1.8cqw] filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
+              <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
+                인스타그램
+              </span>
+            </a>
+
+            {/* 6. 당근 (카카오톡과 자리 교체) */}
+            <a
+              id="btn-daangn"
+              href="https://www.daangn.com/kr/local-profile/%EC%9B%94%EC%95%A4%ED%99%88%EC%BC%80%EC%96%B4-6q3xgn3y6mkg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-orange-950/35 border border-amber-500/30 hover:border-orange-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
+              title="당근 바로가기"
+            >
+              <img
+                src="/daangn-app-icon.svg"
+                alt="당근"
+                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+              />
+              <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
+                당근
+              </span>
             </a>
           </div>
 
