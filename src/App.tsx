@@ -78,15 +78,6 @@ export default function App() {
         type: 'naver',
       },
       {
-        id: 'youtube',
-        title: '유튜브',
-        desc: '월앤홈케어 공식 유튜브',
-        badge: '공식 영상',
-        url: 'https://www.youtube.com/@월앤홈케어',
-        isReady: true,
-        type: 'youtube',
-      },
-      {
         id: 'daangn',
         title: '당근',
         desc: '이웃들의 리얼 후기와 단골 소식',
@@ -103,6 +94,15 @@ export default function App() {
         url: 'https://www.instagram.com/032.6l/',
         isReady: true,
         type: 'instagram',
+      },
+      {
+        id: 'youtube',
+        title: '유튜브',
+        desc: '월앤홈케어 공식 유튜브',
+        badge: '공식 영상',
+        url: 'https://www.youtube.com/@월앤홈케어',
+        isReady: true,
+        type: 'youtube',
       },
     ],
   };
@@ -396,7 +396,7 @@ export default function App() {
             {/* 5. 유튜브 (대표 공식 아이콘) */}
             <a
               id="btn-youtube"
-              href="https://www.youtube.com"
+              href="https://www.youtube.com/@월앤홈케어"
               target="_blank"
               rel="noopener noreferrer"
               className="aspect-square w-full rounded-[2cqw] bg-stone-950/75 hover:bg-red-950/35 border border-amber-500/30 hover:border-red-500/70 flex items-center justify-center transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
