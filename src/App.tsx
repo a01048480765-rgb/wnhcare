@@ -82,7 +82,7 @@ export default function App() {
         title: '유튜브',
         desc: '월앤홈케어 공식 유튜브',
         badge: '공식 영상',
-        url: 'https://www.youtube.com/channel/UCLSN15Hs_LE3lbCY0KLDFhQ',
+        url: 'https://www.youtube.com/@월앤홈케어',
         isReady: true,
         type: 'youtube',
       },
