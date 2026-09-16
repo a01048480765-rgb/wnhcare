@@ -240,7 +240,6 @@ export default function App() {
                       src={qrCodeUrl}
                       alt="월앤홈케어 전자명함 QR코드"
                       className="w-full h-full object-contain rounded-[0.5cqw]"
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                 </button>

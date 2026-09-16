@@ -85,7 +85,6 @@ export const QRCodeModal: React.FC<QRCodeModalProps> = ({
                 src={qrImageSrc}
                 alt="전자명함 QR코드"
                 className="w-full h-full object-contain rounded-lg"
-                referrerPolicy="no-referrer"
                 crossOrigin="anonymous"
               />
             </div>
