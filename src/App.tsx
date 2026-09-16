@@ -37,9 +37,6 @@ export default function App() {
     accountHolder: '이영서',
     area: '서울/경기/인천 외 전국',
     areaBadge: '서울·경기·인천 ∣ 전국 출장',
-    profileImageUrl: 'https://wsrv.nl/?url=https://i.imgur.com/FadLgcQ.png',
-    directProfileImageUrl: 'https://i.imgur.com/FadLgcQ.png',
-    fallbackProfileImageUrl: 'https://wsrv.nl/?url=https://wnhcare.com/thumbnail1200x630.png',
     services: [
       {
         title: '에어컨 냉매충전',
