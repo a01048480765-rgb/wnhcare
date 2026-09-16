@@ -257,7 +257,7 @@ export default function App() {
               </div>
               <div
                 id="header-phone-badge"
-                className="inline-flex items-center text-[4.4cqw] text-amber-300 font-normal shrink-0"
+                className="inline-flex items-center text-[3.8cqw] text-amber-300 font-normal shrink-0"
               >
                 <span className="tracking-wide whitespace-nowrap leading-none">{cardData.phoneFormatted}</span>
               </div>
@@ -273,30 +273,30 @@ export default function App() {
               <a
                 id="call-btn"
                 href={`tel:${cardData.phone}`}
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-amber-500/20 hover:bg-amber-500/30 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all shadow-md shadow-amber-500/10 border border-amber-400/50 text-[3.8cqw] whitespace-nowrap leading-none"
+                className="flex items-center justify-center gap-[0.8cqw] py-[3.2cqw] px-[0.6cqw] rounded-[1.2cqw] bg-amber-500/20 hover:bg-amber-500/30 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all shadow-md shadow-amber-500/10 border border-amber-400/50 text-[3.6cqw] whitespace-nowrap leading-none"
                 title={`${cardData.phone} 전화걸기`}
               >
-                <Phone className="w-[4.2cqw] h-[4.2cqw] text-amber-400 shrink-0" />
+                <Phone className="w-[4cqw] h-[4cqw] text-amber-400 shrink-0" />
                 <span>전화걸기</span>
               </a>
 
               <a
                 id="sms-btn"
                 href={`sms:${cardData.phone}`}
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.8cqw] shadow-sm whitespace-nowrap leading-none"
+                className="flex items-center justify-center gap-[0.8cqw] py-[3.2cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.6cqw] shadow-sm whitespace-nowrap leading-none"
                 title={`${cardData.phone} 문자상담`}
               >
-                <MessageSquare className="w-[4.2cqw] h-[4.2cqw] text-amber-400 shrink-0" />
+                <MessageSquare className="w-[4cqw] h-[4cqw] text-amber-400 shrink-0" />
                 <span>문자상담</span>
               </a>
 
               <a
                 id="email-btn"
                 href={`mailto:${cardData.email}`}
-                className="flex items-center justify-center gap-[0.8cqw] py-[3.4cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.8cqw] shadow-sm whitespace-nowrap leading-none"
+                className="flex items-center justify-center gap-[0.8cqw] py-[3.2cqw] px-[0.6cqw] rounded-[1.2cqw] bg-stone-900/80 hover:bg-stone-850 active:scale-95 text-amber-300 hover:text-amber-200 font-normal transition-all border border-amber-500/35 hover:border-amber-400/60 text-[3.6cqw] shadow-sm whitespace-nowrap leading-none"
                 title={`${cardData.email} 이메일 보내기`}
               >
-                <Mail className="w-[4.2cqw] h-[4.2cqw] text-amber-400 shrink-0" />
+                <Mail className="w-[4cqw] h-[4cqw] text-amber-400 shrink-0" />
                 <span>이메일</span>
               </a>
             </div>
@@ -310,10 +310,10 @@ export default function App() {
             <div className="grid grid-cols-2 gap-x-[3.2cqw] gap-y-[1.2cqw]">
               {cardData.services.map((item, idx) => (
                 <div key={idx} className="flex flex-col justify-center min-w-0">
-                  <span className="text-[4.4cqw] font-normal text-amber-300 leading-tight mb-[0.2cqw] truncate whitespace-nowrap tracking-tight">
+                  <span className="text-[3.8cqw] font-normal text-amber-300 leading-tight mb-[0.2cqw] truncate whitespace-nowrap tracking-tight">
                     {item.title}
                   </span>
-                  <p className="text-[3.3cqw] font-normal text-amber-300/85 leading-tight whitespace-nowrap tracking-tight">
+                  <p className="text-[3.2cqw] font-normal text-amber-300/85 leading-tight whitespace-nowrap tracking-tight">
                     {item.desc}
                   </p>
                 </div>
@@ -333,7 +333,7 @@ export default function App() {
               title="월앤홈케어 공식 홈페이지 바로가기"
             >
               <Home
-                className="w-[5.4cqw] h-[5.4cqw] text-amber-400 group-hover:text-amber-300 transition-transform group-hover:scale-105 shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
+                className="w-[4.8cqw] h-[4.8cqw] text-amber-400 group-hover:text-amber-300 transition-transform group-hover:scale-105 shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
                 strokeWidth={2.2}
               />
               <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
@@ -353,7 +353,7 @@ export default function App() {
               <img
                 src="/naver-blog-icon.svg"
                 alt="네이버 블로그"
-                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[4.8cqw] h-[4.8cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
               <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
                 블로그
@@ -372,7 +372,7 @@ export default function App() {
               <img
                 src="/youtube-app-icon.svg"
                 alt="유튜브"
-                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[4.8cqw] h-[4.8cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
               <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
                 유튜브
@@ -391,7 +391,7 @@ export default function App() {
               <img
                 src="/kakaotalk-icon.svg"
                 alt="카카오톡"
-                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[4.8cqw] h-[4.8cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
               <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
                 카카오톡
@@ -410,7 +410,7 @@ export default function App() {
               <img
                 src="/instagram.svg"
                 alt="인스타그램"
-                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[4.8cqw] h-[4.8cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
               <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
                 인스타그램
@@ -429,7 +429,7 @@ export default function App() {
               <img
                 src="/daangn-app-icon.svg"
                 alt="당근"
-                className="w-[5.4cqw] h-[5.4cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
+                className="w-[4.8cqw] h-[4.8cqw] object-contain rounded-[0.8cqw] shrink-0 filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform"
               />
               <span className="text-[3.6cqw] font-normal text-amber-300/90 group-hover:text-amber-200 tracking-tight truncate whitespace-nowrap text-left">
                 당근
@@ -447,7 +447,7 @@ export default function App() {
             className="w-full flex items-center justify-center gap-[1.8cqw] py-[0.8cqw] text-center select-text cursor-pointer group"
             title="클릭 시 계좌번호 복사"
           >
-            <span className="text-[4.2cqw] text-amber-300 font-normal tracking-wide group-hover:text-amber-200 transition-colors">
+            <span className="text-[3.8cqw] text-amber-300 font-normal tracking-wide group-hover:text-amber-200 transition-colors">
               {cardData.bank} {cardData.accountNumber}
             </span>
             <span
