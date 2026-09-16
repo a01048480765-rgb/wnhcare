@@ -36,37 +36,6 @@
     <link rel="icon" type="image/svg+xml" href="/logo-vector.svg" />
     <link rel="apple-touch-icon" href="/logo-vector.svg" />
 
-
-    <!-- Dynamic URL Sync Script -->
-    <script>
-      (function() {
-        try {
-          var origin = window.location.origin;
-          var currentHref = (origin && origin !== 'null' && origin.indexOf('localhost') === -1) 
-            ? window.location.href.replace(/^http:\/\//i, 'https://') 
-            : 'https://wnhcare.com/';
-          
-          var thumbUrl = (origin && origin !== 'null' && origin.indexOf('localhost') === -1)
-            ? origin.replace(/^http:\/\//i, 'https://') + '/thumb.jpg'
-            : 'https://wnhcare.com/thumb.jpg';
-
-          var setAttr = function(selector, attr, val) {
-            var el = document.querySelector(selector);
-            if (el) el.setAttribute(attr, val);
-          };
-
-          setAttr('meta[property="og:url"]', 'content', currentHref);
-          setAttr('link[rel="canonical"]', 'href', currentHref);
-          setAttr('meta[property="og:image"]', 'content', thumbUrl);
-          setAttr('meta[property="og:image:secure_url"]', 'content', thumbUrl);
-          setAttr('meta[name="twitter:image"]', 'content', thumbUrl);
-          setAttr('meta[name="thumbnail"]', 'content', thumbUrl);
-          setAttr('link[rel="image_src"]', 'href', thumbUrl);
-        } catch (e) {
-          console.error('Meta sync failed', e);
-        }
-      })();
-    </script>
     <link rel="preconnect" href="https://wsrv.nl" />
     <link rel="preconnect" href="https://i.imgur.com" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
