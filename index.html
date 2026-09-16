@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>월앤홈케어 전자명함</title>
     <meta name="description" content="월앤홈케어 대표 이영서의 모바일 전자명함 - 에어컨·냉장고 냉매충전, 입주청소, 벽걸이TV설치, 가전제품 홈케어" />
-    <!-- Open Graph for KakaoTalk, LINE, Facebook, Naver -->
+    <!-- Open Graph for KakaoTalk, LINE, Facebook, Naver (Absolute URL) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://wnhcare.com" />
     <meta property="og:title" content="월앤홈케어 전자명함" />
@@ -13,10 +13,24 @@
     <meta property="og:site_name" content="월앤홈케어" />
     <meta property="og:locale" content="ko_KR" />
 
-    <!-- Twitter Card Meta Tags (Text only, no image frame) -->
-    <meta name="twitter:card" content="summary" />
+    <!-- KakaoTalk & SNS Absolute URL Thumbnail Image -->
+    <meta property="og:image" content="https://wnhcare.com/thumb.jpg" />
+    <meta property="og:image:secure_url" content="https://wnhcare.com/thumb.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="월앤홈케어 전자명함 썸네일" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="월앤홈케어 전자명함" />
     <meta name="twitter:description" content="월앤홈케어 대표 이영서의 모바일 전자명함 - 에어컨·냉장고 냉매충전, 입주청소, 벽걸이TV설치, 가전제품 홈케어" />
+    <meta name="twitter:image" content="https://wnhcare.com/thumb.jpg" />
+
+    <!-- Mobile Messenger Thumbnail Links (iMessage, SMS, KakaoTalk, Daum, Naver) -->
+    <meta name="thumbnail" content="https://wnhcare.com/thumb.jpg" />
+    <meta itemprop="image" content="https://wnhcare.com/thumb.jpg" />
+    <link rel="image_src" href="https://wnhcare.com/thumb.jpg" />
 
     <link rel="canonical" href="https://wnhcare.com" />
     <link rel="icon" type="image/svg+xml" href="/logo-vector.svg" />
@@ -34,6 +48,10 @@
             ? window.location.href.replace(/^http:\/\//i, 'https://') 
             : 'https://wnhcare.com/';
           
+          var thumbUrl = (origin && origin !== 'null' && origin.indexOf('localhost') === -1)
+            ? origin.replace(/^http:\/\//i, 'https://') + '/thumb.jpg'
+            : 'https://wnhcare.com/thumb.jpg';
+
           var setAttr = function(selector, attr, val) {
             var el = document.querySelector(selector);
             if (el) el.setAttribute(attr, val);
@@ -41,6 +59,11 @@
 
           setAttr('meta[property="og:url"]', 'content', currentHref);
           setAttr('link[rel="canonical"]', 'href', currentHref);
+          setAttr('meta[property="og:image"]', 'content', thumbUrl);
+          setAttr('meta[property="og:image:secure_url"]', 'content', thumbUrl);
+          setAttr('meta[name="twitter:image"]', 'content', thumbUrl);
+          setAttr('meta[name="thumbnail"]', 'content', thumbUrl);
+          setAttr('link[rel="image_src"]', 'href', thumbUrl);
         } catch (e) {
           console.error('Meta sync failed', e);
         }
