@@ -97,7 +97,7 @@ export default function App() {
         title: '인스타그램',
         desc: '월앤홈케어 공식 인스타그램',
         badge: '공식 SNS',
-        url: 'https://www.instagram.com/032.6l/',
+        url: 'https://www.instagram.com/wnhcare',
         isReady: true,
         type: 'instagram',
       },
@@ -160,8 +160,8 @@ export default function App() {
     const currentUrl = 'https://wnhcare.com';
     const displayHost = 'wnhcare.com';
     const shareData = {
-      title: `${cardData.company} - ${cardData.representative} 대표`,
-      text: `${cardData.company} (${cardData.representative} 대표) 전자명함입니다. 에어컨 냉매충전, 입주∣이사 청소, 벽걸이TV, 가전홈케어 전문`,
+      title: `${cardData.company}∣대표 ${cardData.representative}`,
+      text: `${cardData.company}∣대표 ${cardData.representative} 모바일 전자명함입니다. 에어컨 냉매충전, 입주∣이사 청소, 벽걸이TV, 가전홈케어 전문`,
       url: currentUrl,
     };
 
@@ -397,7 +397,7 @@ export default function App() {
             {/* 5. 인스타그램 */}
             <a
               id="btn-instagram"
-              href="https://www.instagram.com/032.6l/"
+              href="https://www.instagram.com/wnhcare"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-pink-950/35 border border-amber-500/30 hover:border-pink-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
