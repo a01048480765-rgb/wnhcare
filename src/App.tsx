@@ -97,7 +97,7 @@ export default function App() {
         title: '인스타그램',
         desc: '월앤홈케어 공식 인스타그램',
         badge: '공식 SNS',
-        url: 'https://www.instagram.com/wnhcare',
+        url: 'https://www.instagram.com/032.6l/',
         isReady: true,
         type: 'instagram',
       },
@@ -397,7 +397,7 @@ export default function App() {
             {/* 5. 인스타그램 */}
             <a
               id="btn-instagram"
-              href="https://www.instagram.com/wnhcare"
+              href="https://www.instagram.com/032.6l/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-pink-950/35 border border-amber-500/30 hover:border-pink-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
