@@ -161,7 +161,7 @@ export default function App() {
     const displayHost = 'wnhcare.com';
     const shareData = {
       title: `${cardData.company} 전자명함∣대표 ${cardData.representative}`,
-      text: `${cardData.company} 전자명함∣대표 ${cardData.representative} 모바일 전자명함입니다. 에어컨 냉매충전, 입주∣이사 청소, 벽걸이TV, 가전홈케어 전문`,
+      text: `서울·인천·경기∣에어컨 냉매충전·입주이사청소·벽걸이형Tv설치·가전제품 케어`,
       url: currentUrl,
     };
 
