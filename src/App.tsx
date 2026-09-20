@@ -161,7 +161,7 @@ export default function App() {
     const displayHost = 'wnhcare.com';
     const shareData = {
       title: `${cardData.company} 전자명함∣대표 ${cardData.representative}`,
-      text: `서울·인천·경기∣에어컨 냉매충전·입주이사청소·벽걸이형Tv설치·가전제품 케어`,
+      text: `수도권 프리미엄 주거 토탈 케어 : 에어컨 · 입주청소 · TV설치 · 가전세척`,
       url: currentUrl,
     };
 
