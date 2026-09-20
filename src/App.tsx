@@ -61,7 +61,7 @@ export default function App() {
         title: '공식 사이트',
         desc: '월앤홈케어 공식 웹사이트',
         badge: '공식 사이트',
-        url: 'https://wnhsite.ai.studio',
+        url: 'https://wnhsite-mzcl.vercel.app/',
         isReady: true,
         type: 'portfolio',
       },
@@ -322,7 +322,7 @@ export default function App() {
             {/* 1. 공식 사이트 */}
             <a
               id="btn-website"
-              href="https://wnhsite.ai.studio"
+              href="https://wnhsite-mzcl.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-start gap-[1.4cqw] py-[2.4cqw] px-[2.2cqw] rounded-[1.4cqw] bg-stone-950/75 hover:bg-amber-950/35 border border-amber-500/30 hover:border-amber-400/70 transition-all active:scale-[0.96] group overflow-hidden shadow-sm"
